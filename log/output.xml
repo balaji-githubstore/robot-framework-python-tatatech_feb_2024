@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-02-09T06:07:44.006601" rpa="false" schemaversion="5">
+<suite id="s1" name="Valid Login Suite" source="C:\Mine\Company\Tata Tech Jan 2024\HealthRecordRobotFramework\tests\1__login_suite\valid_login_suite.robot">
+<test id="s1-t1" name="Valid Login Test" line="10">
+<kw name="Launch Browse And Navigate To Url" owner="CommonFunctionality" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:07:44.295990" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-09T06:07:44.294993" elapsed="1.508656"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-09T06:07:45.804645" elapsed="0.114698"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-09T06:07:45.919343" elapsed="0.001991"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:07:45.922333" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-09T06:07:45.921334" elapsed="155.697917"/>
+</kw>
+<status status="PASS" start="2024-02-09T06:07:44.293996" elapsed="157.325255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:10:21.621246" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:10:21.620252" elapsed="3.027256"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:10:24.648508" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2024-02-09T06:10:24.693386" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:10:24.647508" elapsed="0.105321"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:10:24.753827" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
+<arg>xpath=//select[@name='languageChoice']</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-09T06:10:24.753827" elapsed="0.096742"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:10:24.851567" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-09T06:10:24.851567" elapsed="4.011790"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-09T06:10:28.876326" level="INFO">Page title is 'OpenEMR'.</msg>
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-02-09T06:10:28.864359" elapsed="0.012961"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T06:10:28.877320" elapsed="2.183172"/>
+</kw>
+<status status="PASS" start="2024-02-09T06:07:44.293996" elapsed="166.766496"/>
+</test>
+<doc>This suite tests the valid credential are allowed to access portal</doc>
+<status status="PASS" start="2024-02-09T06:07:44.010590" elapsed="167.050887"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Valid Login Suite">Valid Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
