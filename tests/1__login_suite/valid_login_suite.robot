@@ -2,6 +2,8 @@
 Documentation   This suite tests the valid credential are allowed to access portal.
 
 Resource    ../../resource/base/CommonFunctionality.resource
+Resource    ../../resource/pages/LoginPage.resource
+Resource    ../../resource/pages/MainPage.resource
 
 Test Setup      Launch Browse And Navigate To Url
 Test Teardown   Close Browser
@@ -20,8 +22,8 @@ Valid Login TC3
 *** Keywords ***
 Valid Login Template
     [Arguments]     ${username}     ${password}    ${language}     ${expected_title}
-    Input Text    id=authUser    ${username}
-    Input Password    css=#clearPass    ${password}
-    Select From List By Label    xpath=//select[@name='languageChoice']    ${language}
-    Click Element    id=login-button
-    Title Should Be    ${expected_title}
+    Enter Username    ${username}
+    Enter Password    ${password}
+    Select Language By Label    ${language}
+    Click Login
+    Validate Main Page Title   ${expected_title}
