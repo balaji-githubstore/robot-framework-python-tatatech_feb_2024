@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   This suite tests the valid credential are allowed to access portal.
+Documentation   This suite tests the invalid credential are allowed to access portal.
 
 Resource    ../../resource/base/CommonFunctionality.resource
 
@@ -7,10 +7,11 @@ Test Setup      Launch Browse And Navigate To Url
 Task Teardown   Close Browser
 
 *** Test Cases ***
-Valid Login Test
-    Input Text    id=authUser    admin
-    Input Password    css=#clearPass    pass
+Valid InvalidLogin Test
+    Input Text    id=authUser    john
+    Input Password    css=#clearPass    john123
     Select From List By Label    xpath=//select[@name='languageChoice']    English (Indian)
     Click Element    id=login-button
-    Title Should Be    OpenEMR
+    Element Text Should Be    xpath=//p[contains(text(),'Invalid')]    Invalid username or password
+
 
