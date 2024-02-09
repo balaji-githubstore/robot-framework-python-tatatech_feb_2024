@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   This suite tests the valid credential are allowed to access portal
+Documentation   This suite tests the valid credential are allowed to access portal.
 
 Resource    ../../resource/base/CommonFunctionality.resource
 
