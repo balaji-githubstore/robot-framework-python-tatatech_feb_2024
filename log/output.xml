@@ -1,85 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-02-09T06:21:44.614120" rpa="false" schemaversion="5">
-<suite id="s1" name="Invalid Login Suite" source="C:\Mine\Company\Tata Tech Jan 2024\HealthRecordRobotFramework\tests\1__login_suite\invalid_login_suite.robot">
-<test id="s1-t1" name="Valid InvalidLogin Test" line="10">
-<kw name="Launch Browse And Navigate To Url" owner="CommonFunctionality" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:44.903989" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=${BROWSER_NAME}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-09T06:21:44.903989" elapsed="1.508858"/>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-02-09T07:04:57.219992" rpa="false" schemaversion="5">
+<suite id="s1" name="Valid Login Suite" source="C:\Mine\Company\Tata Tech Jan 2024\HealthRecordRobotFramework\tests\1__login_suite\valid_login_suite.robot">
+<test id="s1-t1" name="TC4" line="19">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>bala</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-09T07:04:57.497318" elapsed="0.000000"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-09T06:21:46.413843" elapsed="0.155201"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-02-09T06:21:46.569044" elapsed="0.003983"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:46.574023" level="INFO">Opening url 'https://demo.openemr.io/b/openemr'</msg>
-<arg>url=${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-09T06:21:46.574023" elapsed="3.801193"/>
-</kw>
-<status status="PASS" start="2024-02-09T06:21:44.902993" elapsed="5.473204"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:50.377198" level="INFO">Typing text 'john' into text field 'id=authUser'.</msg>
-<arg>id=authUser</arg>
-<arg>john</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:21:50.376197" elapsed="0.101727"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:50.478922" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
-<msg time="2024-02-09T06:21:50.511832" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>css=#clearPass</arg>
-<arg>john123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:21:50.477924" elapsed="0.089760"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:50.568680" level="INFO">Selecting options from selection list 'xpath=//select[@name='languageChoice']' by label English (Indian).</msg>
-<arg>xpath=//select[@name='languageChoice']</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-09T06:21:50.568680" elapsed="0.091639"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:50.661318" level="INFO">Clicking element 'id=login-button'.</msg>
-<arg>id=login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-09T06:21:50.660319" elapsed="1.363575"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-02-09T06:21:52.024886" level="INFO">Verifying element 'xpath=//p[contains(text(),'Invalid')]' contains exact text 'Invalid username or Password'.</msg>
-<msg time="2024-02-09T06:21:52.310123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-09T06:21:52.310123" level="FAIL">The text of element 'xpath=//p[contains(text(),'Invalid')]' should have been 'Invalid username or Password' but it was 'Invalid username or password'.</msg>
-<arg>xpath=//p[contains(text(),'Invalid')]</arg>
-<arg>Invalid username or Password</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="FAIL" start="2024-02-09T06:21:52.023894" elapsed="0.305176">The text of element 'xpath=//p[contains(text(),'Invalid')]' should have been 'Invalid username or Password' but it was 'Invalid username or password'.</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-09T06:21:52.329070" elapsed="2.137753"/>
-</kw>
-<status status="FAIL" start="2024-02-09T06:21:44.901995" elapsed="9.565811">The text of element 'xpath=//p[contains(text(),'Invalid')]' should have been 'Invalid username or Password' but it was 'Invalid username or password'.</status>
+<status status="PASS" start="2024-02-09T07:04:57.496255" elapsed="0.001063"/>
 </test>
-<doc>This suite tests the invalid credential are allowed to access portal.</doc>
-<status status="FAIL" start="2024-02-09T06:21:44.616118" elapsed="9.855682"/>
+<doc>This suite tests the valid credential are allowed to access portal.</doc>
+<status status="PASS" start="2024-02-09T07:04:57.222984" elapsed="0.275258"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Invalid Login Suite">Invalid Login Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Valid Login Suite">Valid Login Suite</stat>
 </suite>
 </statistics>
 <errors>
